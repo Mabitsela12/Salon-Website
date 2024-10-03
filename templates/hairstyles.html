@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}
+Our Services
+{% endblock %}
+
+{% block content %}
+<h2>Our Services</h2>
+<br>
+<br>
+<br>
+<br>
+<!-- Display hairstyles -->
+<h1>Hairstyles</h1>
+<br>
+<br>
+<br>
+<br>
+
+<div class="row">
+    {% for hairstyle in hairstyles %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <img src="{{ url_for('static', filename='hairstyle_images/' + hairstyle.image_file) }}" alt="{{ hairstyle.name }} Image" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{ hairstyle.name }}</h5>
+                <p class="card-text">R{{ hairstyle.price }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<br>
+<br>
+<br>
+<br>
+<!-- Display nails -->
+<h1>Nails</h1>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+    {% for nail in nails %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <img src="{{ url_for('static', filename='nail_images/' + nail.image_file) }}" alt="{{ nail.name }} Image" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{ nail.name }}</h5>
+                <p class="card-text">R{{ nail.price }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<br>
+<br>
+<br>
+<br>
+<!-- Display skincare -->
+<h1>Skincare</h1>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+    {% for skincare in skincares %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <img src="{{ url_for('static', filename='skincare_images/' + skincare.image_file) }}" alt="{{ skincare.name }} Image" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{ skincare.name }}</h5>
+                <p class="card-text">R{{ skincare.price }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

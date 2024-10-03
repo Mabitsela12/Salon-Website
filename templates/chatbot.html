@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Chatbot{% endblock %}
+
+{% block content %}
+    <style>
+        /* Add your CSS styling here */
+        .chat-box {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            overflow-y: scroll;
+            padding: 10px;
+        }
+        .chat-message {
+            margin: 10px 0;
+        }
+        .chat-message.user {
+            text-align: right;
+        }
+        .chat-message.bot {
+            text-align: left;
+        }
+    </style>
+
+    <div class="chat-box" id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Type your message here..." onkeypress="sendMessage(event)">
+    <button onclick="sendMessage(event)">Send</button>
+
+    <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
+{% endblock %}

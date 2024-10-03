@@ -1,0 +1,23 @@
+.logout {
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.login {
+    display: block;
+    width: 100px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.login:hover {
+    background-color: #0056b3;
+}

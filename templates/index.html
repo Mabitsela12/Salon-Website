@@ -1,0 +1,52 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+    Home - Salon Application
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron mt-4">
+    <h1 class="display-4">Welcome to Our Mathipa Salon!</h1>
+    <p class="lead">Discover the art of beauty and relaxation.</p>
+    <hr class="my-4">
+    <p>Indulge yourself with our professional services and personalized care.</p>
+    <a class="btn btn-primary btn-lg" href="/about" role="button">Click For More Details</a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="static\hairstyle_images\hair19.jpeg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Hair Styling</h5>
+                    <p class="card-text">Our expert stylists will transform your hair into a work of art.</p>
+                    <a href="/hairstyles" class="btn btn-sm btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="static\skincare_images\skincare9.jpeg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Facials & Skincare</h5>
+                    <p class="card-text">Revitalize your skin with our customized facial treatments.</p>
+                    <a href="/hairstyles" class="btn btn-sm btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="static\nail_images\nail1.jpeg" alt="Card image cap">
+
+                <div class="card-body">
+                    <h5 class="card-title">Nail Care</h5>
+                    <p class="card-text">Pamper yourself with our luxurious nail care services.</p>
+                    <a href="/hairstyles" class="btn btn-sm btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
